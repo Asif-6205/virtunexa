@@ -1,0 +1,14 @@
+databaseRef.addListenerForSingleValueEvent(new ValueEventListener() {
+    @Override
+    public void onDataChange(@NonNull DataSnapshot snapshot) {
+        for (DataSnapshot quizSnapshot : snapshot.getChildren()) {
+            Quiz quiz = quizSnapshot.getValue(Quiz.class);
+            // Use the quiz object
+        }
+    }
+
+    @Override
+    public void onCancelled(@NonNull DatabaseError error) {
+        Log.e("Firebase", "Failed to fetch data", error.toException());
+    }
+});
