@@ -1,0 +1,10 @@
+{
+  "quizzes": {
+    "quiz1": {
+      "question": "What is the spelling of this image?",
+      "correctAnswer": "apple",
+      "options": ["apple", "appl", "aple", "applle"],
+      "imageUrl": "https://firebase.storage/quiz1.jpg"
+    }
+  }
+}
