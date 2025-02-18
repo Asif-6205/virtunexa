@@ -1,0 +1,10 @@
+DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference("quizzes");
+String quizId = databaseRef.push().getKey();
+
+HashMap<String, Object> quizData = new HashMap<>();
+quizData.put("question", "What is the spelling of this image?");
+quizData.put("correctAnswer", "apple");
+quizData.put("options", Arrays.asList("apple", "appl", "aple", "applle"));
+quizData.put("imageUrl", "https://firebase.storage/quiz1.jpg");
+
+databaseRef.child(quizId).setValue(quizData);
